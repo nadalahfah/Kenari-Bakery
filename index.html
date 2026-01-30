@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kenari bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Kolker+Brush&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="script.js"></script>
+
+</head>
+<body>
+    <!-- header design -->
+     <header class="header">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo kenari">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </div>
+        <div class="login" id="auth-container">
+    <button id="loginBtn" class="login-btn" onclick="window.location.href='login.html'">LOG IN</button>
+</div>
+            
+        </div>
+     </header>
+     <section class="home" id="home">
+       <div class="home-img">
+
+         <div class="big-circle" id="bigCircle">
+            <img src="image/dessert/fudgibrownies.jpeg" id="bigImage" alt="display">
+         </div>
+
+        <div class="small-circle first-circle">
+            <img src="image/dessert/klapertart.jpeg" alt="">
+        </div>
+
+        <div class="small-circle sec-circle">
+            <img src="image/dessert/lasagna.jpeg" alt="">
+        </div>
+
+        <div class="small-circle thi-circle">
+            <img src="image/dessert/spageti .jpeg" alt="">
+        </div>
+
+        <div class="small-circle four-circle">
+            <img src="image/dessert/tiramisu.jpeg" alt="">
+        </div>
+
+       </div>
+
+        <div class="home-content">
+            <h1>Kenari</h1>
+            <h2>Bakery</h2>
+            <p>Our bakery is built on the belief that food should feel like home a place where warmth, comfort, and care come together. Every morning, we begin by baking everything fresh, using thoughtfully chosen ingredients and time-honored techniques. Each loaf, pastry, and dessert is made to be shared, enjoyed, and remembered. We believe that the simplest treats can create the most meaningful moments, turning ordinary days into something a little more special.</p>
+        </div>
+        <div class="search-box">
+    <input 
+        type="text" 
+        placeholder="Looking for something sweet?"
+        aria-label="Search bakery product"
+    >
+    <button type="submit">
+        <i class='bx  bx-search'></i>     
+    </button>
+</div>
+    <div class="running-text">
+  <div class="running-track">
+    <span>Freshly baked every day • Made with love • Warm moments in every bite • </span>
+    <span>Freshly baked every day • Made with love • Warm moments in every bite • </span>
+  </div>
+</div>
+
+     </section>
+
+     <section class="product" id="product">
+        <div class="category">
+            <h2>Fresh From Our Oven</h2>
+             <div class="category-list">
+            <ul>
+                <li>
+                    <a href="bread.html">
+                    <img src="image/bread/bread.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="cake.html">
+                    <img src="image/cake/ChatGPT Image Jan 25, 2026, 01_57_40 PM.png" alt="">
+                    </a>    
+                </li>
+                <li>
+                    <a href="cookies.html">
+                    <img src="image/cookies/cookies.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="donuts.html">
+                    <img src="image/donuts/donuts.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="pastry.html">
+                    <img src="image/pastry/pastry.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="juice.html">
+                    <img src="image/juice/jus.jpg" alt="">
+                    </a>
+                </li>               
+            </ul>
+        </div>
+        </div>
+    <div class="promo-content">
+  <h2>Hot Oven Sale</h2>
+
+  <div class="sale">
+    <button class="nav prev">‹</button>
+
+    <div class="sale-track">
+
+      <div class="sale-card">
+        <div class="img-box">
+          <img src="image/dessert/tiramisu.jpeg" alt="">
+        </div>
+
+        <div class="card-body">
+          <h4 class="product-name">Tiramisu</h4>
+
+          <div class="info">
+            <span class="price">Rp 50.000</span>
+            <span class="badge">TERBATAS</span>
+          </div>
+
+          <a href="tiramisu.html" class="buy-btn">Take Me Home</a>
+        </div>
+      </div>
+
+      <div class="sale-card">
+        <div class="img-box">
+          <img src="image/dessert/salad.jpeg" alt="">
+        </div>
+
+        <div class="card-body">
+          <h4 class="product-name">Salad</h4>
+
+          <div class="info">
+            <span class="price">Rp 50.000</span>
+            <span class="badge">TERBATAS</span>
+          </div>
+
+          <a href="salad.html" class="buy-btn">Take Me Home</a>
+        </div>
+      </div>
+
+      <div class="sale-card">
+        <div class="img-box">
+          <img src="image/dessert/spageti .jpeg" alt="">
+        </div>
+
+        <div class="card-body">
+          <h4 class="product-name">Spaghetti</h4>
+
+          <div class="info">
+            <span class="price">Rp 50.000</span>
+            <span class="badge">TERBATAS</span>
+          </div>
+
+          <a href="spaghetti.html" class="buy-btn">Take Me Home</a>
+        </div>
+      </div>
+
+      <div class="sale-card">
+        <div class="img-box">
+          <img src="image/dessert/klapertart.jpeg" alt="">
+        </div>
+
+        <div class="card-body">
+          <h4 class="product-name">Klapertart</h4>
+
+          <div class="info">
+            <span class="price">Rp 50.000</span>
+            <span class="badge">TERBATAS</span>
+          </div>
+
+          <a href="klapertart.html" class="buy-btn">Take Me Home</a>
+        </div>
+      </div>
+
+      <div class="sale-card">
+        <div class="img-box">
+          <img src="image/dessert/fudgibrownies.jpeg" alt="">
+        </div>
+
+        <div class="card-body">
+          <h4 class="product-name">Fudgy Brownies</h4>
+
+          <div class="info">
+            <span class="price">Rp 50.000</span>
+            <span class="badge">TERBATAS</span>
+          </div>
+
+          <a href="brownies.html" class="buy-btn">Take Me Home</a>
+        </div>
+      </div>
+
+    </div>
+
+      <button class="nav next">›</button>
+    </div>
+  </div>
+     </section>
+   <script>
+  const track = document.querySelector('.sale-track');
+  const next = document.querySelector('.next');
+  const prev = document.querySelector('.prev');
+
+  next.addEventListener('click', () => {
+    track.scrollBy({ left: 300, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    track.scrollBy({ left: -300, behavior: 'smooth' });
+  });
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>Kenari Bakery</h3>
+      <p>
+        Freshly baked with love.  
+        Bringing warmth and sweetness to your everyday moments.
+      </p>
+    </div>
+
+    <div class="footer-menu">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bread.html">Produck</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="order.html">Order</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>📍 Surabaya, Indonesia</p>
+      <p>📞 0812-842-7010</p>
+      <p>✉️ kenaribakery@gmail.com</p>
+
+      <div class="socials">
+        <a href="https://www.instagram.com/kenari.bakery/">Instagram</a>
+        <a href="#">WhatsApp</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kenari Bakery. All Rights Reserved.</p>
+  </div>
+</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authContainer = document.getElementById('auth-container');
+            
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                authContainer.innerHTML = `
+                    <a href="profile.html" class="profile-link">
+                        <div class="profile-icon-circle">
+                            <img src="image/profile.jpg" alt="Profile"> 
+                        </div>
+                    </a>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>

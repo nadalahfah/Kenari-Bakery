@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kenari Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Kolker+Brush&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo kenari">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#product">Product</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="order.html">Order</a></li>
+            </ul>
+        </div>
+<div class="login" id="auth-container">
+    <button id="loginBtn" class="login-btn" onclick="window.location.href='login.html'">LOG IN</button>
+</div>
+    </header>
+
+    <section class="about-hero">
+        <h1 class="script-title">About Kenari</h1>
+        <p class="hero-desc">
+            A story of passion, tradition, and the finest baked goods, made with love and care to fill every bite with warmth, joy, and a touch of magic.
+        </p>
+    </section>
+
+    <section class="our-story">
+        <div class="story-container">
+            <div class="story-img">
+                <img src="image/about.jpeg" alt="Kenari Bakery Interior"> 
+            </div>
+            <div class="story-text">
+                <h2 class="section-title">Our Story</h2>
+                <p>
+                    Kenari Bakery was founded in 2022 with a simple mission: to bring warmth, comfort, and joy to every home through our freshly baked goods.
+                </p>
+                <p>
+                    What started as a small home kitchen operation has grown into a beloved community bakery, but our values remain the same. We believe that food should feel like home—a place where warmth, comfort, and care come together.
+                </p>
+                <p>
+                    Every morning, we begin our day by baking everything fresh, using thoughtfully chosen ingredients and time-honored techniques passed down through generations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-values">
+        <h2 class="section-title center">Our Values</h2>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="icon-box"><i class='bx bx-heart'></i></div>
+                <h3>Made with Love</h3>
+                <p>Every item is crafted with passion and care, ensuring the highest quality for our customers.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon-box"><i class='bx bx-medal'></i></div>
+                <h3>Quality Ingredients</h3>
+                <p>We use only the finest, locally-sourced ingredients to create our delicious baked goods.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon-box"><i class='bx bx-group'></i></div>
+                <h3>Community Focus</h3>
+                <p>We believe in building relationships and being an integral part of our community.</p>
+            </div>
+            <div class="value-card">
+                <div class="icon-box"><i class='bx bx-time'></i></div>
+                <h3>Fresh Daily</h3>
+                <p>Everything is baked fresh every morning to ensure you get the best taste and quality.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="meet-bakers">
+        <h2 class="section-title center">Meet Our Bakers</h2>
+        <div class="bakers-grid">
+            
+            <div class="baker-card">
+                <div class="baker-img">
+                    <img src="image/bakers.jpg" alt="James Chen">
+                </div>
+                <h3>Imelda Hersusijanti</h3>
+                <span>Main Chef</span>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>Kenari Bakery</h3>
+                <p>Freshly baked with love. Bringing warmth and sweetness to your everyday moments.</p>
+            </div>
+            <div class="footer-menu">
+                <h4>Menu</h4>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bread.html">Produck</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="order.html">Order</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>📍 Surabaya, Indonesia</p>
+                <p>📞 0812-842-7010</p>
+                <p>✉️ kenaribakery@gmail.com</p>
+                <div class="socials">
+                    <a href="https://www.instagram.com/kenari.bakery/">Instagram</a>
+                    <a href="#">WhatsApp</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kenari Bakery. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const authContainer = document.getElementById('auth-container');
+            
+            // Cek status login
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+            if (isLoggedIn === 'true') {
+                authContainer.innerHTML = `
+                    <a href="profile.html" class="profile-link">
+                        <div class="profile-icon-circle">
+                            <img src="image/profile.jpg" alt="Profile"> 
+                        </div>
+                    </a>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

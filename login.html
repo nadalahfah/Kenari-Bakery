@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kenari Bakery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #fdf1ed; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div class="card" style="width: 100%; max-width: 400px; text-align: center; padding: 3rem;">
+        <h1 class="script-title" style="font-size: 3rem; margin-bottom: 1rem;">Login</h1>
+        <p style="margin-bottom: 2rem; color: #666;">Welcome back, Baker!</p>
+        
+        <form id="loginForm">
+            <div class="form-group" style="text-align: left;">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="kenari@bakery.com" required>
+            </div>
+            <div class="form-group" style="text-align: left; margin-top: 1rem;">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="••••••••" required>
+            </div>
+            
+            <button type="submit" class="checkout-btn" style="margin-top: 2rem; display: flex; justify-content: center; align-items: center;">LOG IN</button>
+        </form>
+        
+        <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #888;">
+            Don't have an account? <a href="#" style="color: var(--first-color); font-weight: 600;">Sign Up</a>
+        </p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userName', 'Sarah Martinez'); 
+            
+            window.location.href = 'index.html';
+        });
+    </script>
+    <script>
+    function checkLoginStatus() {
+        const authSection = document.getElementById('authSection');
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const userName = localStorage.getItem('userName');
+
+        if (isLoggedIn === 'true') {
+            authSection.innerHTML = `
+                <div class="profile-nav" style="display: flex; align-items: center; gap: 15px; cursor: pointer;">
+                    <span style="font-weight: 500; font-size: 0.9rem; color: #4d727e;">Hi, ${userName.split(' ')[0]}!</span>
+                    <div class="avatar" style="width: 35px; height: 35px; background: #4d727e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
+                        <i class='bx bx-user'></i>
+                    </div>
+                    <button onclick="logout()" style="background: none; border: none; color: #ff4d4d; font-size: 0.8rem; cursor: pointer; font-weight: 600;">LOGOUT</button>
+                </div>
+            `;
+        }
+    }
+
+    function logout() {
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('userName');
+        location.reload(); 
+    }
+
+    document.addEventListener('DOMContentLoaded', checkLoginStatus);
+</script>
+
+</body>
+</html>
