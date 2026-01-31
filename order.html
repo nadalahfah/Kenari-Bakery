@@ -117,7 +117,7 @@
         <span>Rp 205.000</span>
     </div>
 
-    <button class="order-btn">Order Now</button>
+    <button class="order-btn"onclick="handleOrder()">Order Now</button>
     <p class="terms">By placing an order, you agree to our terms and conditions.</p>
 </div>
             </div>
@@ -185,6 +185,20 @@ document.getElementById('placeOrderBtn').addEventListener('click', function() {
         window.location.href = "order-processing.html";
     }
 });
+function handleOrder() {
+    // Cek apakah ada data user di localStorage (tanda sudah login)
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+
+    if (isLoggedIn === 'true') {
+        // Jika sudah login, arahkan ke halaman proses
+        window.location.href = 'order-processing.html';
+    } else {
+        // Jika belum login, kasih peringatan dan arahkan ke login
+        alert('Silahkan login terlebih dahulu untuk melakukan pemesanan!');
+        window.location.href = 'login.html';
+    }
+}
+
 </script>
 
 
