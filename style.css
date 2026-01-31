@@ -1,3 +1,6 @@
+/* =========================================
+   1. GLOBAL & ROOT SETTINGS
+   ========================================= */
 :root {
     --bg-color: #FBE0D8;
     --first-color: #4D727E;
@@ -7,25 +10,35 @@
     --text-color: #000000;
 }
 
-section{
-    min-height: 100vh;
-    padding: 6rem 6rem;
-}
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+html, body {
+    overflow-x: hidden;
+}
+
+body {
     margin: 0;
     background: var(--bg-color);
     color: var(--text-color);
 }
-html, body{
-    overflow-x: hidden;
+
+section {
+    min-height: 100vh;
+    padding: 6rem 6rem;
 }
-.header{
+
+.Italiana {
+    font-family: 'Italiana', serif;
+}
+
+/* =========================================
+   2. HEADER & NAVIGATION
+   ========================================= */
+.header {
     position: relative; 
     width: 100%;
     height: 180px;
@@ -33,9 +46,6 @@ html, body{
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-
-    /* gradasi alus */
-    width: 100%;
     background: linear-gradient(
         to bottom,
         #4D727E 0%,
@@ -47,40 +57,7 @@ html, body{
     );
 }
 
-#auth-container {
-    display: inline-flex; 
-    vertical-align: middle; 
-    margin-top: 18px; 
-}
-
-.profile-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.profile-icon-circle {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 2px solid #4d727e;
-    background: #fff;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 !important; 
-}
-
-.logo img{
-    width: 160px;
-    height: auto;
-    margin-top: -10px;
-    margin-bottom: 70px;
-    margin-left: -20px;
-}
-
-.header-container{
+.header-container {
     max-width: 1200px;
     margin: auto;
     padding: 2rem 9%;
@@ -89,44 +66,55 @@ html, body{
     align-items: center;
 }
 
-.navigation{
+.logo img {
+    width: 160px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: 70px;
+    margin-left: -20px;
+}
+
+.navigation {
     margin-top: 10px;
     margin-right: -340px;
     font-size: 1.2rem;
 }
 
-.navigation ul{
+.navigation ul {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 2rem;
-
     background: var(--bg-color);
     padding: 0.8rem 2rem;
     border-radius: 999px; 
     backdrop-filter: blur(6px);
 }
 
-
-.navigation ul li a{
+.navigation ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 40px;
     padding: 0 5px;
-
     text-decoration: none;
     color: var(--text-color);
     font-size: 1rem;
     transition: 0.3s ease;
 }
 
-.navigation ul li a:hover{
+.navigation ul li a:hover,
+.navigation ul li a.active {
     color: var(--first-color);
 }
 
-.login-btn{
+#auth-container {
+    display: inline-flex; 
+    vertical-align: middle; 
+    margin-top: 18px; 
+}
+
+.login-btn {
     padding: 0.6rem 1.4rem;
     border-radius: 999px;
     border: 1px solid var(--first-color);
@@ -134,21 +122,17 @@ html, body{
     color: var(--first-color);
     font-size: 0.9rem;
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 10px;
 }
-.login-btn:hover{
+
+.login-btn:hover {
     background: var(--first-color);
     color: #fff;
 }
 
-
-.container {
-  position: relative;
-  width: 500px;
-  height: 500px;
-}
-
-/* ================= HOME SECTION ================= */
+/* =========================================
+   3. HOME SECTION
+   ========================================= */
 .home {
     position: relative;
     min-height: 100vh;
@@ -156,7 +140,6 @@ html, body{
     overflow: hidden;
 }
 
-/* ================= IMAGE AREA ================= */
 .home-img {
     position: absolute;
     left: -140px;                 
@@ -166,7 +149,6 @@ html, body{
     height: 600px;
 }
 
-/* lingkaran besar */
 .big-circle {
     position: absolute;
     top: 0px;
@@ -184,7 +166,6 @@ html, body{
     object-fit: cover;
 }
 
-/* ================= SMALL CIRCLES ================= */
 .small-circle {
     position: absolute;
     width: 95px;
@@ -207,7 +188,6 @@ html, body{
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* posisi lingkaran kecil (DISETEL MANUAL SESUAI MOCKUP) */
 .first-circle {
     top: 13rem;
     left: 35rem;
@@ -234,7 +214,6 @@ html, body{
     left: 27rem;
 }
 
-/* ================= TEXT CONTENT ================= */
 .home-content {
     position: relative;
     margin-left: 55%;           
@@ -243,11 +222,11 @@ html, body{
     z-index: 5;
 }
 
-/* judul */
 .home-content h1 {
     font-family: 'Kolker Brush', cursive;
     font-size: 7.5rem;
     line-height: 1;
+    color: var(--first-color);
 }
 
 .home-content h2 {
@@ -256,9 +235,9 @@ html, body{
     margin-top: -3.7rem;
     margin-bottom: 0.1rem;
     margin-left: 10rem;
+    color: var(--first-color);
 }
 
-/* deskripsi */
 .home-content p {
     font-size: 0.95rem;
     line-height: 1.8;
@@ -266,7 +245,6 @@ html, body{
     max-width: 420px;
 }
 
-/* ================= SEARCH BOX ================= */
 .search-box {
     margin-top: 1rem;
     display: flex;
@@ -294,9 +272,12 @@ html, body{
     cursor: pointer;
 }
 
-.running-text{
+/* =========================================
+   4. RUNNING TEXT & CATEGORY
+   ========================================= */
+.running-text {
     position: absolute;
-    bottom: 4rem;
+    bottom: 5rem;
     left: 0;
     width: 100%;
     height: 50px;
@@ -304,13 +285,13 @@ html, body{
     background: var(--third-color);
 }
 
-.running-track{
+.running-track {
     display: flex;
     width: max-content;
     animation: marquee 20s linear infinite;
 }
 
-.running-track span{
+.running-track span {
     font-family: 'Italiana', serif;
     font-size: 2rem;
     letter-spacing: 0.15em;
@@ -320,28 +301,20 @@ html, body{
 }
 
 @keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
 }
 
-.product{
-    background: var(--third-color);
-}
-
-.category{
+.category {
     background: var(--second-bg-color);
     width: 100vw;      
     height: 18rem;    
-    margin-top: -70px;
+    margin-top: -8px;
     margin-left: calc(-50vw + 50%);
     padding: 4rem 0;
 }
 
-.category h2{
+.category h2 {
     font-family: italiana, serif;
     text-align: center;
     margin-top: -50px;
@@ -352,7 +325,7 @@ html, body{
     color: var(--four-color);
 }
 
-.category-list ul{
+.category-list ul {
     list-style: none;
     display: grid;
     justify-content: space-between;
@@ -362,7 +335,7 @@ html, body{
     padding: 0 1rem;
 }
 
-.category-list li{
+.category-list li {
     flex: 1;
     background: var(--four-color);
     border-radius: 16px;
@@ -371,7 +344,7 @@ html, body{
     margin-top: -30px;
 }
 
-.category-list li img{
+.category-list li img {
     width: 100%;
     height: 100px;
     object-fit: contain;
@@ -390,13 +363,165 @@ html, body{
   color: var(--first-color);
 }
 
+/* =========================================
+   5. PRODUCT SECTION
+   ========================================= */
+#product {
+    background: var(--bg-color); 
+    padding: 0rem 6rem;
+    min-height: auto;
+}
 
+.product {
+    background: var(--third-color);
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-top: 0rem;
+    margin-top: -20px !important;
+}
+
+.title-script {
+    font-family: 'Kolker Brush', cursive; 
+    font-size: 6rem;
+    color: var(--first-color); 
+    margin: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 3.5rem;
+}
+
+.filter-btn {
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 1px solid var(--first-color);
+    background-color: transparent;
+    color: var(--first-color);
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(77, 114, 126, 0.1);
+}
+
+.filter-btn.active {
+    background-color: var(--first-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(77, 114, 126, 0.4);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.card-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.add-cart-btn {
+    background-color: var(--first-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.add-cart-btn:hover {
+    background-color: #3a565f; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   6. PROMO & SALE
+   ========================================= */
 .promo-content {
   margin-top: 20px;
   text-align: center;
 }
 
-.promo-content h2{
+.promo-content h2 {
     margin-bottom: 20px;
     font-family: italiana, serif;
     text-align: center;
@@ -427,13 +552,11 @@ html, body{
   flex-shrink: 0;
 }
 
-/* WRAPPER GAMBAR */
 .img-box {
   width: 100%;
   height: 180px;
 }
 
-/* GAMBAR */
 .img-box img {
   width: 100%;
   height: 100%;
@@ -451,7 +574,6 @@ html, body{
   margin-bottom: 10px;
 }
 
-
 .info {
   display: flex;
   justify-content: center;
@@ -461,6 +583,9 @@ html, body{
 
 .price {
   font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  color: var(--first-color);
 }
 
 .badge {
@@ -469,8 +594,6 @@ html, body{
   border-radius: 20px;
   background: #f7c6d0; 
 }
-
-
 
 .nav {
   background: none;
@@ -495,263 +618,9 @@ html, body{
   color: #153332;
 }
 
-.footer {
-  background: var(--second-bg-color); 
-  color: var(--four-color);
-  margin-top: 80px;
-  padding-top: 50px;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  padding: 0 80px;
-}
-
-.footer h3,
-.footer h4 {
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  line-height: 1.6;
-  max-width: 300px;
-}
-
-.footer-menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-menu ul li {
-  margin-bottom: 10px;
-}
-
-.footer-menu ul li a {
-  text-decoration: none;
-  color: var(--four-color);
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.footer-menu ul li a:hover {
-  color: #f7c6d0; 
-}
-
-.footer-contact p {
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-
-.socials {
-  margin-top: 12px;
-  display: flex;
-  gap: 12px;
-}
-
-.socials a {
-  text-decoration: none;
-  font-size: 13px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: #f7c6d0;
-  color: #153332;
-  transition: 0.3s;
-}
-
-.socials a:hover {
-  background: var(--four-color);
-}
-
-.footer-bottom {
-  margin-top: 40px;
-  padding: 20px;
-  text-align: center;
-  background: #1f2a33;
-  font-size: 13px;
-}
-
-/* ================= PRODUCT SECTION RE-DESIGN ================= */
-
-/* Reset padding section product agar lebih rapi */
-#product {
-    background: var(--bg-color); 
-    padding: 4rem 6rem;
-    min-height: auto;
-}
-
-/* --- 1. Header (Our Products) --- */
-.product-header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-.title-script {
-    font-family: 'Kolker Brush', cursive; 
-    font-size: 6rem;
-    color: var(--first-color); 
-    margin: 0;
-    line-height: 1;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-}
-
-.subtitle {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.1rem;
-    color: #555;
-    margin-top: 10px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-}
-
-/* --- 2. Filter Buttons (Pill Shape) --- */
-.filter-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 3.5rem;
-}
-
-.filter-btn {
-    padding: 10px 30px;
-    border-radius: 50px; /* Bentuk Pill */
-    border: 1px solid var(--first-color);
-    background-color: transparent;
-    color: var(--first-color);
-    font-family: 'Rubik', sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.filter-btn:hover {
-    background-color: rgba(77, 114, 126, 0.1);
-}
-
-/* Tombol Aktif (Seperti "Cake" di screenshot) */
-.filter-btn.active {
-    background-color: var(--first-color);
-    color: #fff;
-    box-shadow: 0 4px 15px rgba(77, 114, 126, 0.4);
-}
-
-/* --- 3. Product Grid (Card Layout) --- */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.product-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Gambar Produk */
-.card-image {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    transition: transform 0.3s ease;
-}
-
-.product-card:hover .card-image img {
-    transform: scale(1.05);
-}
-
-/* Konten Kartu */
-.card-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.card-content h3 {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.3rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-}
-
-/* Bagian Harga & Tombol */
-.card-action {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
-}
-
-.price {
-    font-family: 'Rubik', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--first-color);
-}
-
-.add-cart-btn {
-    background-color: var(--first-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.add-cart-btn:hover {
-    background-color: #3a565f; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-
-
-@media (max-width: 768px) {
-    .title-script {
-        font-size: 4rem;
-    }
-    .filter-container {
-        gap: 10px;
-    }
-    .filter-btn {
-        padding: 8px 20px;
-        font-size: 0.9rem;
-    }
-    #product {
-        padding: 3rem 1.5rem;
-    }
-}
-
-/* ================= ABOUT PAGE ================ */
-
+/* =========================================
+   7. ABOUT PAGE
+   ========================================= */
 .about {
     position: relative;
     min-height: 100vh; 
@@ -762,7 +631,6 @@ html, body{
     background: var(--bg-color); 
     overflow: hidden;
 }
-
 
 .about-content h1 {
     font-family: 'Kolker Brush', cursive;
@@ -789,134 +657,19 @@ html, body{
     text-align: justify; 
 }
 
-
-
-/* ================= PREMIUM STICKY CART ================= */
-
-.sticky-cart {
-    position: fixed;
-    bottom: 30px; 
-    left: 50%;
-    transform: translateX(-50%); 
-    width: 90%; 
-    max-width: 600px; 
-    
-    background: rgba(255, 255, 255, 0.95); 
-    backdrop-filter: blur(10px); 
-    
-    padding: 15px 25px;
-    border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    border: 1px solid rgba(77, 114, 126, 0.1);
-    margin-bottom: 20px; 
+.about-hero,
+.our-story,
+.our-values,
+.meet-bakers {
+    min-height: auto !important; 
+    padding-top: 3rem; 
+    padding-bottom: 3rem;
 }
 
-/* Class untuk memunculkan cart */
-.sticky-cart.active {
-    bottom: 0;
-}
-
-/* Bagian Kiri (Icon + Harga) */
-.cart-summary {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.cart-icon-wrapper {
-    position: relative;
-    font-size: 1.8rem;
-    color: var(--first-color); 
-    display: flex;
-    align-items: center;
-}
-
-.item-badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: #D9534F; 
-    color: white;
-    font-size: 0.7rem;
-    font-weight: bold;
-    min-width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #fff;
-}
-
-.cart-details {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.cart-details .label {
-    font-size: 0.75rem;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.cart-details .amount {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--first-color);
-    font-family: 'Rubik', sans-serif;
-}
-
-/* Tombol Checkout */
-.checkout-btn {
-    background: var(--first-color); 
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px; 
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(77, 114, 126, 0.3);
-}
-
-.checkout-btn:hover {
-    background: #3a565f; 
-    transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-    .sticky-cart {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 20px 20px 0 0; 
-        margin-bottom: 0;
-        padding: 15px 20px;
-    }
-}
-
-/* ABOUT US         */
-
-.navigation ul li a.active {
-    color: var(--first-color);
-}
-
-/* --- Hero Section About --- */
 .about-hero {
     text-align: center;
-    padding: 2rem 6rem 4rem; 
-    margin-top: -20px;
+    padding: 6rem 6rem 1rem; 
+    margin-top: -120px;
 }
 
 .script-title {
@@ -924,7 +677,7 @@ html, body{
     font-size: 8rem; 
     color: var(--first-color);
     line-height: 1;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
@@ -936,7 +689,6 @@ html, body{
     color: #444;
 }
 
-/* --- Global Section Title Style --- */
 .section-title {
     font-family: 'Italiana', serif;
     font-size: 3rem;
@@ -944,14 +696,14 @@ html, body{
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
+
 .section-title.center {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
 }
 
-/* --- Our Story Section --- */
 .our-story {
-    padding: 4rem 6rem;
+    padding: 0rem 6rem;
     background: var(--bg-color); 
 }
 
@@ -989,7 +741,6 @@ html, body{
     font-size: 1rem;
 }
 
-/* --- Our Values Section --- */
 .our-values {
     padding: 4rem 6rem;
 }
@@ -1044,7 +795,6 @@ html, body{
     color: #555;
 }
 
-/* --- Meet Our Bakers Section --- */
 .meet-bakers {
     padding: 2rem 6rem 6rem;
 }
@@ -1088,50 +838,13 @@ html, body{
     font-size: 0.95rem;
 }
 
-@media (max-width: 768px) {
-    .about-hero .script-title {
-        font-size: 5rem;
-    }
-    .story-container {
-        flex-direction: column;
-        gap: 2rem;
-    }
-    .story-img {
-        width: 100%;
-        height: 250px;
-    }
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-    .bakers-grid {
-        flex-direction: column;
-        gap: 2rem;
-    }
-}
-
-/* ABOUT US */
-
-.about-hero,
-.our-story,
-.our-values,
-.meet-bakers {
-    min-height: auto !important; 
-    padding-top: 3rem; 
-    padding-bottom: 3rem;
-}
-
-.about-hero {
-    padding-top: 6rem;
-    padding-bottom: 1rem; 
-}
-
-
-/* HALAMAN ORDER / CHECKOUT */
-
+/* =========================================
+   8. ORDER & CHECKOUT PAGE
+   ========================================= */
 .order-hero {
     text-align: center;
-    padding-top: 6rem;
-    padding-bottom: 2rem;
+    padding-top: 0px;
+    padding-bottom: 1rem;
     min-height: auto !important; 
 }
 
@@ -1148,13 +861,13 @@ html, body{
     margin: 0 auto;
 }
 
-/* --- Card Styles Umum --- */
 .card {
     background: #fff;
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     margin-bottom: 1.5rem;
+    text-align: left;
 }
 
 .card h3 {
@@ -1167,7 +880,6 @@ html, body{
     gap: 10px;
 }
 
-/* --- Cart Items --- */
 .cart-item {
     display: flex;
     align-items: center;
@@ -1236,7 +948,6 @@ html, body{
     margin-left: 5px;
 }
 
-/* --- Form Pengiriman --- */
 .form-group {
     margin-bottom: 1rem;
 }
@@ -1262,110 +973,6 @@ html, body{
 .form-group textarea:focus {
     border-color: var(--first-color);
 }
-
-.bulk-card {
-    background: #ebf5f7; 
-    border: 1px dashed var(--first-color);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bulk-text p {
-    font-size: 0.95rem;
-    margin-bottom: 1.2rem;
-    color: #555;
-}
-
-.bulk-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.social-btn {
-    text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 99px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.social-btn.whatsapp {
-    background: #25D366;
-    color: #fff;
-}
-.social-btn.whatsapp:hover {
-    background: #20bd5a;
-    transform: translateY(-2px);
-}
-
-.social-btn.instagram {
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    color: #fff;
-}
-.social-btn.instagram:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-}
-
-.summary-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    font-size: 0.95rem;
-    color: #555;
-}
-
-.summary-row.total {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--second-bg-color);
-    margin-top: 1rem;
-}
-
-.checkout-btn {
-    width: 100%;
-    padding: 1rem;
-    background: var(--first-color); 
-    color: #fff;
-    border: none;
-    border-radius: 99px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: 0.3s;
-}
-
-.checkout-btn:hover {
-    background: var(--second-bg-color);
-}
-
-.terms {
-    font-size: 0.75rem;
-    text-align: center;
-    margin-top: 1rem;
-    color: #888;
-}
-
-@media (max-width: 768px) {
-    .checkout-container {
-        grid-template-columns: 1fr;
-    }
-    .order-content {
-        padding: 0 2rem 4rem;
-    }
-}
-
-/* ========================================= */
-/* TAMBAHAN UNTUK ORDER NOTES           */
-/* ========================================= */
 
 .order-notes {
     margin-top: 1.2rem;
@@ -1406,6 +1013,210 @@ html, body{
     font-style: italic;
 }
 
+.bulk-card {
+    background: #ebf5f7; 
+    border: 1px dashed var(--first-color);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bulk-text p {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    color: #555;
+}
+
+.bulk-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 99px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.social-btn.whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+.social-btn.whatsapp:hover {
+    background: #20bd5a;
+    transform: translateY(-2px);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: #fff;
+}
+
+.social-btn.instagram:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+    text-align: left; 
+}
+
+.summary-row.total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--second-bg-color);
+    margin-top: 1rem;
+    border-top: 1px solid #eee; 
+    padding-top: 1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--first-color); 
+    color: #fff;
+    border: none;
+    border-radius: 99px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.3s;
+    gap: 10px;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.order-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--first-color); 
+    color: #fff;
+    border: none;
+    border-radius: 99px; 
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding-right: 0 !important; 
+}
+
+.order-btn:hover {
+    background: var(--second-bg-color);
+    transform: translateY(-2px);
+}
+
+.terms {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 1rem;
+    color: #888;
+}
+
+/* =========================================
+   9. STICKY CART
+   ========================================= */
+.sticky-cart {
+    position: fixed;
+    bottom: 30px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 90%; 
+    max-width: 600px; 
+    background: rgba(255, 255, 255, 0.95); 
+    backdrop-filter: blur(10px); 
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: bottom 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border: 1px solid rgba(77, 114, 126, 0.1);
+    margin-bottom: 20px; 
+}
+
+.sticky-cart.active {
+    bottom: 0;
+}
+
+.cart-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-icon-wrapper {
+    position: relative;
+    font-size: 1.8rem;
+    color: var(--first-color); 
+    display: flex;
+    align-items: center;
+}
+
+.item-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #D9534F; 
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+}
+
+.cart-details {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.cart-details .label {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cart-details .amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--first-color);
+    font-family: 'Rubik', sans-serif;
+}
+
+/* =========================================
+   10. PROFILE SETTINGS
+   ========================================= */
 .profile-link {
     display: flex;
     align-items: center;
@@ -1424,6 +1235,7 @@ html, body{
     align-items: center;
     background: #fff;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 !important; 
 }
 
 .profile-icon-circle img {
@@ -1437,15 +1249,240 @@ html, body{
     color: var(--first-color);
 }
 
-.Italiana {
-    font-family: 'Italiana', serif;
-}
-
 .profile-img-large img {
-
     transition: transform 0.3s ease;
 }
 
 .profile-img-large:hover img {
     transform: scale(1.1);
+}
+
+.profile-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto; 
+    align-items: flex-start;
+    padding-top: 10px; 
+    padding-bottom: 50px;
+}
+
+.logout-btn {
+    background: #ff4d4d; 
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 25px; 
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 77, 77, 0.2);
+}
+
+.logout-btn:hover {
+    background: #e63939;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 77, 77, 0.4);
+}
+
+.card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+.info-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex: 1; 
+}
+
+.form-group-custom {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.form-group-custom label {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #4d727e;
+}
+
+.form-group-custom input, 
+.form-group-custom textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group-custom input:focus {
+    border-color: var(--first-color);
+}
+
+.update-btn {
+    width: 100%;
+    background: var(--first-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.update-btn:hover {
+    background: var(--second-bg-color);
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.footer {
+    background: var(--second-bg-color); 
+    color: var(--four-color);
+    margin-top: 80px;
+    padding-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 80px;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-menu ul li {
+    margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+    text-decoration: none;
+    color: var(--four-color);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-menu ul li a:hover {
+    color: #f7c6d0; 
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.socials {
+    margin-top: 12px;
+    display: flex;
+    gap: 12px;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #f7c6d0;
+    color: #153332;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    background: var(--four-color);
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    background: #1f2a33;
+    font-size: 13px;
+}
+
+/* =========================================
+   12. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================= */
+@media (max-width: 768px) {
+    .title-script {
+        font-size: 4rem;
+    }
+    .filter-container {
+        gap: 10px;
+    }
+    .filter-btn {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+    #product {
+        padding: 3rem 1.5rem;
+    }
+    .about-hero .script-title {
+        font-size: 5rem;
+    }
+    .story-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .story-img {
+        width: 100%;
+        height: 250px;
+    }
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    .bakers-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+    .order-content {
+        padding: 0 2rem 4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .sticky-cart {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px 20px 0 0; 
+        margin-bottom: 0;
+        padding: 15px 20px;
+    }
 }

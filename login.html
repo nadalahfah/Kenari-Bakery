@@ -6,24 +6,36 @@
     <title>Login - Kenari Bakery</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body style="background-color: #fdf1ed; display: flex; justify-content: center; align-items: center; height: 100vh;">
+<body style="background-color: #fdf1ed; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px;">
 
-    <div class="card" style="width: 100%; max-width: 400px; text-align: center; padding: 3rem;">
-        <h1 class="script-title" style="font-size: 3rem; margin-bottom: 1rem;">Login</h1>
+    <div class="card" style="width: 100%; max-width: 450px; text-align: center; padding: 2.5rem; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <h1 class="script-title" style="font-size: 3.5rem; margin-bottom: 0.5rem; color: var(--first-color);">Login</h1>
         <p style="margin-bottom: 2rem; color: #666;">Welcome back, Baker!</p>
         
         <form id="loginForm">
-            <div class="form-group" style="text-align: left;">
-                <label>Email</label>
-                <input type="email" id="email" placeholder="kenari@bakery.com" required>
+            <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.85rem; margin-bottom: 5px;">Email</label>
+                <input type="email" id="email" placeholder="kenari@bakery.com" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 10px;">
             </div>
-            <div class="form-group" style="text-align: left; margin-top: 1rem;">
-                <label>Password</label>
-                <input type="password" id="password" placeholder="••••••••" required>
+
+            <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.85rem; margin-bottom: 5px;">Password</label>
+                <input type="password" id="password" placeholder="••••••••" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 10px;">
+            </div>
+
+            <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.85rem; margin-bottom: 5px;">Nomor Telepon</label>
+                <input type="tel" id="phone" placeholder="0812xxxxxxx" required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 10px;">
+            </div>
+
+            <div class="form-group" style="text-align: left; margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.85rem; margin-bottom: 5px;">Alamat Lengkap</label>
+                <textarea id="address" placeholder="Jl. Raya No. 1..." required style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 10px; height: 80px; resize: none; font-family: sans-serif;"></textarea>
             </div>
             
-            <button type="submit" class="checkout-btn" style="margin-top: 2rem; display: flex; justify-content: center; align-items: center;">LOG IN</button>
+            <button type="submit" class="checkout-btn" style="width: 100%; margin-top: 1rem; display: flex; justify-content: center; align-items: center; padding: 1rem; border-radius: 99px;">LOG IN</button>
         </form>
         
         <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #888;">
@@ -35,39 +47,27 @@
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
-            localStorage.setItem('isLoggedIn', 'true');
-            localStorage.setItem('userName', 'Sarah Martinez'); 
+            // Ambil data dari input
+            const emailValue = document.getElementById('email').value;
+            const phoneValue = document.getElementById('phone').value;
+            const addressValue = document.getElementById('address').value;
             
+            // Simpan ke localStorage
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('userEmail', emailValue);
+            localStorage.setItem('userPhone', phoneValue);
+            localStorage.setItem('userAddress', addressValue);
+            localStorage.setItem('userName', 'Sarah Martinez'); // Nama default (simulasi)
+            
+            // Pindah ke halaman utama
             window.location.href = 'index.html';
         });
-    </script>
-    <script>
-    function checkLoginStatus() {
-        const authSection = document.getElementById('authSection');
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-        const userName = localStorage.getItem('userName');
 
-        if (isLoggedIn === 'true') {
-            authSection.innerHTML = `
-                <div class="profile-nav" style="display: flex; align-items: center; gap: 15px; cursor: pointer;">
-                    <span style="font-weight: 500; font-size: 0.9rem; color: #4d727e;">Hi, ${userName.split(' ')[0]}!</span>
-                    <div class="avatar" style="width: 35px; height: 35px; background: #4d727e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
-                        <i class='bx bx-user'></i>
-                    </div>
-                    <button onclick="logout()" style="background: none; border: none; color: #ff4d4d; font-size: 0.8rem; cursor: pointer; font-weight: 600;">LOGOUT</button>
-                </div>
-            `;
+        // Fungsi logout tetep ada buat bersihin session
+        function logout() {
+            localStorage.clear();
+            location.reload(); 
         }
-    }
-
-    function logout() {
-        localStorage.removeItem('isLoggedIn');
-        localStorage.removeItem('userName');
-        location.reload(); 
-    }
-
-    document.addEventListener('DOMContentLoaded', checkLoginStatus);
-</script>
-
+    </script>
 </body>
 </html>

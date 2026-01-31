@@ -82,7 +82,7 @@
                         <p>For orders of more than <strong>10 items</strong>, please contact us directly for special arrangements & prices.</p>
                     </div>
                     <div class="bulk-buttons">
-                        <a href="https://wa.me/6281234567890" target="_blank" class="social-btn whatsapp">
+                        <a href="https://wa.me/6212-842-7010" target="_blank" class="social-btn whatsapp">
                             <i class='bx bxl-whatsapp'></i> WhatsApp
                         </a>
                         <a href="https://www.instagram.com/kenari.bakery/" target="_blank" class="social-btn instagram">
@@ -94,32 +94,32 @@
             </div>
 
 <div class="right-column">
-                <div class="card summary-card">
-                    <h3>Order Summary</h3>
-                    
-                    <div class="summary-row">
-                        <span>Subtotal</span>
-                        <span>Rp 190.000</span>
-                    </div>
-                    <div class="summary-row">
-                        <span>Delivery Fee</span>
-                        <span>Rp 15.000</span>
-                    </div>
+                <div class="card">
+    <h3>Order Summary</h3>
+    
+    <div class="summary-row">
+        <span>Subtotal</span>
+        <span>Rp 190.000</span>
+    </div>
+    
+    <div class="summary-row">
+        <span>Delivery Fee</span>
+        <span>Rp 15.000</span>
+    </div>
 
-                    <div class="order-notes">
-                        <label for="notes">Order Notes (Optional)</label>
-                        <textarea id="notes" placeholder="Special request (e.g. Birthday greeting, less sugar)..."></textarea>
-                    </div>
-                    <hr>
-                    
-                    <div class="summary-row total">
-                        <span>Total</span>
-                        <span>Rp 205.000</span>
-                    </div>
-                    
-                    <button class="checkout-btn">Place Order</button>
-                    <p class="terms">By placing an order, you agree to our terms and conditions.</p>
-                </div>
+    <div class="order-notes">
+        <label>Order Notes (Optional)</label>
+        <textarea placeholder="Special request..."></textarea>
+    </div>
+
+    <div class="summary-row total">
+        <span>Total</span>
+        <span>Rp 205.000</span>
+    </div>
+
+    <button class="order-btn">Order Now</button>
+    <p class="terms">By placing an order, you agree to our terms and conditions.</p>
+</div>
             </div>
     </section>
 
@@ -171,5 +171,22 @@
             }
         });
     </script>
+<script>
+document.getElementById('placeOrderBtn').addEventListener('click', function() {
+    // 1. Cek apakah user sudah login (contoh status disimpan di localStorage)
+    const isLoggedIn = localStorage.getItem('isLoggedIn'); 
+
+    if (!isLoggedIn) {
+        // 2. Jika BELUM login, lempar ke halaman login
+        alert("Silakan login terlebih dahulu!");
+        window.location.href = "login.html"; 
+    } else {
+        // 3. Jika SUDAH login, lempar ke halaman "Pemesanan Sedang Dibuat"
+        window.location.href = "order-processing.html";
+    }
+});
+</script>
+
+
 </body>
 </html>
