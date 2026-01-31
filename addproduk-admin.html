@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kenari bakery</title>
+    <link rel="stylesheet" href="style-admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Kolker+Brush&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!-- header design -->
+     <header class="header">
+        <div class="logo">
+            <img src="image/logo.png" alt="logo kenari">
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="index-admin.html"><i class='bx  bx-pencil'></i></a></li>
+                <li><a href="addproduk-admin.html"><i class='bx  bx-plus'></i></a></li>
+                <li><a href="pelanggan-admin.html"><i class='bx  bx-notepad'></i></a></li>
+                <li><a href="pengguna-admin.html"><i class='bx  bx-group'></i></a></li>
+            </ul>
+        </div>
+            
+        </div>
+     </header>
+
+    <div class="main">
+        
+        <div class="card">
+            <h3>Input Produk / Tambah Stok</h3>
+            
+            <label>Nama Produk</label>
+            <input type="text" id="nama_produk" placeholder="Misal: chocolate bread">
+
+            <label>Harga</label>
+            <input type="number" id="harga_produk" placeholder="Misal: 25000">
+
+            <label>Jumlah Stok Masuk</label>
+            <input type="number" id="stok_produk" placeholder="Misal: 50">
+
+            <button onclick="simpanProduk()" class="btn-primary" style="margin-top: 10px;">
+                Tambahkan Produk
+            </button>
+        </div>
+
+        <div class="card">
+            <h3>Sisa Stok di Gudang</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama produk</th>
+                        <th>Harga</th>
+                        <th>Sisa Stok</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelProduk">
+                    </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+<script src="addproduk-admin.js"></script>
+
+</body>
+</html>
