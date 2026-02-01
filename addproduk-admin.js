@@ -26,13 +26,15 @@ async function loadData() {
 // TAMBAH / UPDATE
 async function simpanProduk() {
     const nama = document.getElementById("nama_produk").value;
+    const kategori = document.getElementById("kategori_produk").value;
     const harga = document.getElementById("harga_produk").value;
     const stok = document.getElementById("stok_produk").value;
-
+    
     if (!nama || !harga || !stok) return alert("Isi semua data!");
 
     const dataKirim = {
         namaBarang: nama,
+        kategori: kategori,
         harga: Number(harga),
         stok: Number(stok)
     };
@@ -55,6 +57,7 @@ async function simpanProduk() {
     }
 
     document.getElementById("nama_produk").value = "";
+    document.getElementById("kategori_produk").value = "";
     document.getElementById("harga_produk").value = "";
     document.getElementById("stok_produk").value = "";
 
@@ -65,6 +68,7 @@ async function simpanProduk() {
 function setEdit(id, nama, harga, stok) {
     editId = id;
     document.getElementById("nama_produk").value = nama;
+    document.getElementById("kategori_produk").value = kategori;
     document.getElementById("harga_produk").value = harga;
     document.getElementById("stok_produk").value = stok;
 }
