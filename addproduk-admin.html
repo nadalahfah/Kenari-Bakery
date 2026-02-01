@@ -37,8 +37,20 @@
             <label>Nama Produk</label>
             <input type="text" id="nama_produk" placeholder="Misal: chocolate bread">
 
+            <label>Kategori</label>
+                <select id="kategori_produk">
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="Bread">Bread</option>
+                    <option value="Cookies">Cookies</option>
+                    <option value="Donuts">Donuts</option>
+                    <option value="Pastry">Pastry</option>
+                    <option value="Juice">Juice</option>
+                    <option value="Cake">Cake</option>
+                    <option value="Hot-Sale">Hot Sale</option>
+                </select>
+
             <label>Harga</label>
-            <input type="number" id="harga_produk" placeholder="Misal: 25000">
+            <input type="string" id="harga_produk" placeholder="Misal: 25000">
 
             <label>Jumlah Stok Masuk</label>
             <input type="number" id="stok_produk" placeholder="Misal: 50">
@@ -69,5 +81,4 @@
 <script src="addproduk-admin.js"></script>
 
 </body>
-
 </html>
