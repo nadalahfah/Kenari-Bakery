@@ -15,9 +15,14 @@ async function loadData() {
         <td>${t.totalHarga}</td>
         <td>${t.keterangan}</td>
         <td>${new Date(t.waktuPemesanan).toLocaleString()}</td>
+        <td> <button onclick="hapusPelanggan('${item._id}')" style="background:#f44336;color:white;border:none;padding:5px 10px;border-radius:5px;">
+                hapus
+             </button>
+        </td>
       </tr>
     `;
   });
 }
+
 
 loadData();
